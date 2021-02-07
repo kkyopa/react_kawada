@@ -1,8 +1,17 @@
 import React from "react";
-import "../styles/App.css";
+import { RouteComponentProps } from "react-router-dom";
+import "../../styles/App.css";
 
-function App() {
-  return <></>;
+export default function CustomerFirst(props: RouteComponentProps) {
+  const Next = () => {
+    props.history.push({ pathname: "/customer_input" });
+  };
+
+  return (
+    <>
+      お客様情報
+      {/* <button>戻る</button> */}
+      <button onClick={Next}>次へ</button>
+    </>
+  );
 }
-
-export default App;

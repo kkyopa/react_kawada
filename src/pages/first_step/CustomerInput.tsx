@@ -1,8 +1,14 @@
 import React from "react";
-import "../styles/App.css";
+import "../../styles/App.css";
 
-function App() {
-  return <></>;
+export default function CustomerInput() {
+  return (
+    <div>
+      <h1>こんにちは</h1>
+    </div>
+  );
 }
 
-export default App;
+// const customerinput = () => {
+//   return { CustomerInput };
+// };
