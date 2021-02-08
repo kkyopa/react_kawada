@@ -1,8 +1,15 @@
 import React from "react";
-import "../../styles/App";
+import { RouteComponentProps } from "react-router-dom";
+import "../../styles/App.css";
 
-function App() {
-  return <></>;
+export default function CustomerComplete(props: RouteComponentProps) {
+  const Next = () => {
+    props.history.push({ pathname: "/mypage_top" });
+  };
+  return (
+    <div>
+      <h2>完了しました</h2>
+      <button onClick={Next}>マイページ画面</button>
+    </div>
+  );
 }
-
-export default App;

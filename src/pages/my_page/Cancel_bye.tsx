@@ -1,8 +1,11 @@
 import React from "react";
-import "../styles/App.css";
+import { RouteComponentProps } from "react-router-dom";
+import "../../styles/App.css";
 
-function App() {
-  return <></>;
+export default function CancelBye() {
+  return (
+    <div>
+      <h2>退会画面</h2>
+    </div>
+  );
 }
-
-export default App;

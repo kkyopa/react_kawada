@@ -9,8 +9,7 @@ export default function CustomerFirst(props: RouteComponentProps) {
 
   return (
     <>
-      お客様情報
-      {/* <button>戻る</button> */}
+      <h2>お客様情報</h2>
       <button onClick={Next}>次へ</button>
     </>
   );
