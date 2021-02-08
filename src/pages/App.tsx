@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import "../styles/App.css";
 import { BrowserRouter, Route } from "react-router-dom";
 import CustomerFirst from "../pages/first_step/CustomerFirst";
@@ -9,7 +9,7 @@ import MypageTop from "../pages/my_page/MypageTop";
 import Input from "../pages/my_page/Input";
 import CancelBye from "../pages/my_page/Cancel_bye";
 
-const App = () => {
+const App = (): ReactElement => {
   return (
     <BrowserRouter>
       <Route exact path="/customer_first" component={CustomerFirst} />
