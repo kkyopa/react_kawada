@@ -10,7 +10,7 @@ export default function CustomerInput(
   };
   return (
     <div>
-      <h2>登録画面</h2>
+      <h2>ユーザー登録画面</h2>
       {/* <button>戻る</button> */}
       <button onClick={Next}>次へ</button>
     </div>
