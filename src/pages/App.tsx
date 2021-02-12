@@ -14,10 +14,14 @@ export const UserContext = createContext(
   {} as {
     TestUser: User.DummyUser;
     setTestUser: React.Dispatch<React.SetStateAction<User.DummyUser>>;
+
     TestContractor: User.DummyContractor;
     setTestContractor: React.Dispatch<
       React.SetStateAction<User.DummyContractor>
     >;
+
+    TestHuman: User.HumanRegister;
+    setTestHuman: React.Dispatch<React.SetStateAction<User.HumanRegister>>;
   }
 );
 
@@ -29,6 +33,10 @@ const App = (): ReactElement => {
     User.DUMMY_CONTRACTOR
   );
 
+  const [TestHuman, setTestHuman] = useState<User.HumanRegister>(
+    User.DummyHuman
+  );
+
   return (
     <BrowserRouter>
       <UserContext.Provider
@@ -37,6 +45,8 @@ const App = (): ReactElement => {
           setTestUser: setTestUser,
           TestContractor: TestContractor,
           setTestContractor: setTestContractor,
+          TestHuman: TestHuman,
+          setTestHuman: setTestHuman,
         }}
       >
         <Route exact path="/customer_first" component={CustomerFirst} />
