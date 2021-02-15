@@ -8,6 +8,7 @@ import "../../styles/App.css";
 
 import * as User from "../../services/User";
 
+// スタイル
 const useStyles = makeStyles(() =>
   createStyles({
     gridCenter: {
@@ -43,7 +44,7 @@ export default function CustomerInput(
     setTestHuman(newHuman);
   };
 
-  const Input = () => {
+  const InputRepeat = () => {
     const humanContent = [];
     // let flg = false;
     for (let count = 1; count <= TestHuman.length; count++) {
@@ -69,7 +70,7 @@ export default function CustomerInput(
   return (
     <div>
       <Box className={classes.HumanBox}>ユーザー登録画面</Box>
-      <Box>{Input}</Box>
+      <Box>{InputRepeat}</Box>
       <button onClick={Next}>次へ</button>
     </div>
   );
