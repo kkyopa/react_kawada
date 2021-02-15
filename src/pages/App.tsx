@@ -20,8 +20,8 @@ export const UserContext = createContext(
       React.SetStateAction<User.DummyContractor>
     >;
 
-    TestHuman: User.HumanRegister;
-    setTestHuman: React.Dispatch<React.SetStateAction<User.HumanRegister>>;
+    TestHuman: User.HumanRegister[];
+    setTestHuman: React.Dispatch<React.SetStateAction<User.HumanRegister[]>>;
   }
 );
 
@@ -33,9 +33,9 @@ const App = (): ReactElement => {
     User.DUMMY_CONTRACTOR
   );
 
-  const [TestHuman, setTestHuman] = useState<User.HumanRegister>(
-    User.DummyHuman
-  );
+  const [TestHuman, setTestHuman] = useState<User.HumanRegister[]>([
+    User.getDummyHuman(),
+  ]);
 
   return (
     <BrowserRouter>

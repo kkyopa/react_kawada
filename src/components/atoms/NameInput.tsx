@@ -26,14 +26,16 @@ export function NameInput(props: NameInputProps): ReactElement {
 
   return (
     <div>
-      名前
-      <input
-        type="text"
-        value={props.name}
-        onChange={(e) => {
-          props.onNameChanged(e.target.value);
-        }}
-      />
+      <Grid container direction="row" alignItems="center">
+        名前
+        <input
+          type="text"
+          value={props.name}
+          onChange={(e) => {
+            props.onNameChanged(e.target.value);
+          }}
+        />
+      </Grid>
     </div>
   );
 }

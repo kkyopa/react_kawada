@@ -18,7 +18,6 @@ export const DEFAULT_FORM_VALUE = "-";
 
 export type HumanRegister = {
   Id?: string;
-  state?: number;
   name: string;
   gender: Gender | typeof DEFAULT_FORM_VALUE;
   birthDate: {
@@ -28,6 +27,7 @@ export type HumanRegister = {
   };
 };
 
+// 人間情報初期値
 export const DummyHuman: HumanRegister = {
   name: "",
   gender: DEFAULT_FORM_VALUE,
@@ -56,6 +56,7 @@ export const Gender = {
 // Gender型を定義
 export type Gender = typeof Gender[keyof typeof Gender];
 
+// 初回登録者ダミー
 export const DUMMY_TEST_USER: DummyUser = {
   gender: "男性",
   birthDate: new Date(1992, 2, 3),
