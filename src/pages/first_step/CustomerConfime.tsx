@@ -7,10 +7,9 @@ import { UserContext } from "../App";
 
 const useStyles = makeStyles(() =>
   createStyles({
-    gridCenter: {
+    gridBox: {
       justify: "center",
       alignItems: "center",
-      spacing: 1,
     },
     HumanBox: {
       marginBottom: "20px",
@@ -25,6 +24,7 @@ const useStyles = makeStyles(() =>
 export default function CustomerConfime(
   props: RouteComponentProps
 ): ReactElement {
+  const classes = useStyles();
   const { TestHuman: TestHuman, setTestHuman: setTestHuman } = React.useContext(
     UserContext
   );
@@ -42,12 +42,24 @@ export default function CustomerConfime(
       const human = TestHuman[count - 1];
       humanData.push(
         <Grid>
-          <Grid>
-            <Grid>お名前</Grid>
-            <Grid item xs={9}>
-              <div>{human.name}</div>
+          <Box border={1} borderColor="text.primary" borderRadius={16} p={1}>
+            <Grid container direction="row" className={classes.gridBox}>
+              <Grid item xs={3}>
+                お名前
+              </Grid>
+              <Grid item xs={9}>
+                <div>{human.name}</div>
+              </Grid>
             </Grid>
-          </Grid>
+            <Grid container direction="row" className={classes.gridBox}>
+              <Grid item xs={3}>
+                性別
+              </Grid>
+              <Grid item xs={9}>
+                <div>{human.gender}</div>
+              </Grid>
+            </Grid>
+          </Box>
         </Grid>
       );
     }

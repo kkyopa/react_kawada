@@ -1,7 +1,6 @@
 import React, { ReactElement } from "react";
 import { Grid, TextField } from "@material-ui/core";
 import { createStyles, makeStyles } from "@material-ui/core/styles";
-import { Gender } from "../../services/User";
 
 const useStyles = makeStyles(() =>
   createStyles({

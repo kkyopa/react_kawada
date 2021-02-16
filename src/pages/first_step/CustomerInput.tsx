@@ -4,6 +4,7 @@ import { createStyles, makeStyles } from "@material-ui/core/styles";
 import { Button, Grid, Box } from "@material-ui/core";
 import { UserContext } from "../App";
 import { RegisterInput } from "../../components/block/RegisterInput";
+import { Gender } from "../../services/User";
 import "../../styles/App.css";
 
 import * as User from "../../services/User";
@@ -44,6 +45,14 @@ export default function CustomerInput(
     setTestHuman(newHuman);
   };
 
+  // ③関数を定義する
+
+  const onGenderChanged = (count: number, gender: User.Gender) => {
+    const newHuman = TestHuman.slice();
+    newHuman[count - 1].gender = gender;
+    setTestHuman(newHuman);
+  };
+
   const InputRepeat = () => {
     const humanContent = [];
     // let flg = false;
@@ -55,6 +64,11 @@ export default function CustomerInput(
           name={TestHuman[count - 1].name}
           onNameChanged={(name) => {
             onNameChanged(count, name);
+          }}
+          // ④　genderとonGenderChangedを記述
+          gender={TestHuman[count - 1].gender}
+          onGenderChanged={(gender) => {
+            onGenderChanged(count, gender);
           }}
         />
       );
