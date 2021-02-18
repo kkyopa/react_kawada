@@ -65,7 +65,7 @@ export default function CustomerInput(
           onNameChanged={(name) => {
             onNameChanged(count, name);
           }}
-          // ④　genderとonGenderChangedを記述
+          // ④genderとonGenderChangedを記述
           gender={TestHuman[count - 1].gender}
           onGenderChanged={(gender) => {
             onGenderChanged(count, gender);
